@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>RainDemo</title>
+    <style>
+        .bg {
+            background-color: #000;
+            overflow: hidden;
+        }
+        
+        div {
+            position: absolute;
+            width: 0;
+            height: 0;
+        }
+        
+        .clicked {
+            position: absolute;
+            background-color: white;
+            height: 80%;
+            width: 40%;
+            left: 50%;
+            top: 50%;
+            margin-left: -20%;
+            margin-top: -20%;
+            animation: change 2s linear;
+            -moz-animation: change 2s linear;
+            -o-animation: change 2s linear;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px #888888;
+            -moz-border-radius: 2px 2px 5px #888888;
+        }
+        
+        @keyframes change {
+            0% {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes change {
+            0% {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @-moz-keyframes change {
+            0% {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @-o-keyframes change {
+            0% {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                width: 0;
+                height: 0;
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body class="bg" id="bg">
+    <canvas id="rain">你的浏览器不支持，请更换浏览器</canvas>
+    <div id="box">123123123123</div>
+    <script src="rain.js"></script>
+    <script>
+        var bg = document.getElementById("bg");
+        var box = document.getElementById("box");
+        bg.onclick = function() {
+            box.setAttribute("class", "clicked");
+        }
+
+    </script>
+</body>
+
+</html>
